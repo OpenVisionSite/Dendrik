@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  color: #000;
+}
+
+body {
+  background: var(--main-bg-color);
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: initial;
+}
+
+input {
+  outline: none;
+  border: none;
+  border-radius: 60px;
+  background: initial;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+:root {
+  --default-width-selection: 1160px;
+  --mobile-1270-width: 620px;
+  --mobile-740-width: 420px;
+  --mobile-740-width-foother: 390px;
+  --content-indent: 27px;
+  --main-bg-color: #f6f6f6;
+  --main-text-color: #000;
+  --foother-text-color: #fff;
+}
+
+.cnt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+}
+.header .navbar-top {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+  height: 92px;
+  -webkit-backdrop-filter: blur(35px);
+          backdrop-filter: blur(35px);
+  background: rgba(255, 255, 255, 0.7);
+}
+.header .navbar-top .catalog-container {
+  justify-content: left;
+  width: 240px;
+  height: 100%;
+  margin-left: 82px;
+}
+.header .navbar-top .catalog-container .catalog-button {
+  flex-direction: row;
+  padding: 14px;
+  gap: 12px;
+}
+.header .navbar-top .catalog-container .catalog-button .catalog-square {
+  width: 21px;
+  height: 21px;
+  border: 2px solid #000;
+  border-radius: 6px;
+}
+.header .navbar-top .links-items .list-items {
+  flex-direction: row;
+  gap: 18px;
+  margin: 0;
+}
+.header .navbar-top .links-items .list-items .link {
+  padding: 14px;
+  white-space: nowrap;
+}
+.header .navbar-top .options-container {
+  justify-content: right;
+  gap: 12px;
+  width: 240px;
+  margin-right: 82px;
+}
+.header .navbar-top .options-container .select-linguage {
+  padding: 14px;
+}
+.header .navbar-top .options-container .basket {
+  padding: 14px;
+  cursor: pointer;
+}
+.header .back-main {
+  width: 100%;
+  height: 100%;
+  margin-top: 92px;
+}
+.header .back-main .background-img {
+  width: 100%;
+  height: 100%;
+  margin: var(--content-indent);
+  border-radius: 25px;
+  background-size: cover;
+  background-image: url("img/background.png");
+}
+.header .arrow-indicator {
+  width: 100%;
+  height: 94px;
+}
+
+.content {
+  flex-direction: column;
+  width: 100%;
+  padding: 88px 0;
+  gap: var(--content-indent);
+}
+.content .board-container {
+  width: 100%;
+  height: 396px;
+}
+.content .board-container .board-content {
+  justify-content: left;
+  width: var(--default-width-selection);
+  height: 396px;
+  cursor: pointer;
+  margin: var(--content-indent);
+  border-radius: 25px;
+  background: #fff;
+}
+.content .board-container .board-content .block-container {
+  width: 45%;
+  height: 100%;
+}
+.content .board-container .board-content .block-container .board-items {
+  align-items: flex-end;
+  justify-content: left;
+  flex-direction: row;
+  width: 60%;
+}
+.content .board-container .board-content .block-container .board-items h1 {
+  line-height: inherit;
+  font-size: 28px;
+}
+.content .board-container .board-content .nursery-img {
+  width: 55%;
+  height: 100%;
+  border-radius: 0 25px 25px 0;
+  background-image: url("img/nursery.png");
+}
+.content .board-container .board-content .childrens-furniture-img {
+  width: 55%;
+  height: 100%;
+  border-radius: 0 25px 25px 0;
+  background-image: url("img/childrens-furniture.png");
+}
+.content .board-container .board-content .toys-img {
+  width: 55%;
+  height: 100%;
+  border-radius: 0 25px 25px 0;
+  background-image: url("img/toys.png");
+}
+.content .board-container .board-content .crafts-img {
+  width: 55%;
+  height: 100%;
+  border-radius: 0 25px 25px 0;
+  background-image: url("img/crafts.png");
+}
+
+.foother {
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+  width: 100%;
+  padding: 80px 0 40px;
+  background: #000;
+}
+.foother * {
+  color: #fff;
+}
+.foother .feedback-container {
+  display: flex;
+  flex-direction: column;
+  gap: 73px;
+  width: var(--default-width-selection);
+}
+.foother .feedback-container h1 {
+  width: 50%;
+  text-align: left;
+  font-size: 42px;
+  font-weight: 600px;
+  text-transform: uppercase;
+}
+.foother .feedback-container p {
+  width: 50%;
+  line-height: 20px;
+  text-align: right;
+  font-size: 15px;
+  font-weight: lighter;
+}
+.foother .feedback-container .feedback-form {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+.foother .feedback-container .feedback-form input {
+  width: 14vw;
+  height: 48px;
+}
+.foother .feedback-container .feedback-form .feedback-input-container {
+  padding: 0 18px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 60px;
+}
+.foother .feedback-container .feedback-form .feedback-button-container {
+  height: 52px;
+  padding: 0 48px;
+  border-radius: 60px;
+  background: #fff;
+  color: #000;
+}
+.foother .informations-blocks {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  width: var(--default-width-selection);
+}
+.foother .informations-blocks .information-block-1 {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 6px;
+  width: 240px;
+}
+.foother .informations-blocks .information-block-1 h1 {
+  font-size: 19px;
+}
+.foother .informations-blocks .information-block-1 .inf-links a {
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media only screen and (max-width: 1270px) {
+  .links-items {
+    display: none;
+  }
+  .content .board-container .board-content {
+    width: var(--mobile-1270-width);
+  }
+  .content .board-container .board-content .block-container {
+    width: 60%;
+  }
+  .content .board-container .board-content .nursery-img {
+    width: 40%;
+  }
+  .content .board-container .board-content .childrens-furniture-img {
+    width: 40%;
+  }
+  .content .board-container .board-content .toys-img {
+    width: 40%;
+  }
+  .content .board-container .board-content .crafts-img {
+    width: 40%;
+  }
+  .foother .feedback-container {
+    width: var(--mobile-1270-width);
+  }
+  .foother .informations-blocks {
+    flex-direction: column;
+    width: var(--mobile-1270-width);
+    gap: 42px;
+  }
+  .foother .informations-blocks .information-block-1 {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .header {
+    background: #fff;
+  }
+  .header .navbar-top .catalog-container {
+    margin-left: 30px;
+  }
+  .header .navbar-top .options-container {
+    margin-right: 30px;
+  }
+}
+@media only screen and (max-width: 740px) {
+  .links-items {
+    display: none;
+  }
+  .content .board-container {
+    height: 530px;
+  }
+  .content .board-container .board-content {
+    flex-direction: column-reverse;
+    width: var(--mobile-740-width);
+    height: 530px;
+  }
+  .content .board-container .board-content .block-container {
+    width: 100%;
+    height: 20%;
+  }
+  .content .board-container .board-content .block-container .board-items {
+    justify-content: center;
+  }
+  .content .board-container .board-content .nursery-img {
+    width: 100%;
+    height: 80%;
+    border-radius: 25px 25px 0 0;
+  }
+  .content .board-container .board-content .childrens-furniture-img {
+    width: 100%;
+    height: 80%;
+    border-radius: 25px 25px 0 0;
+  }
+  .content .board-container .board-content .toys-img {
+    width: 100%;
+    height: 80%;
+    border-radius: 25px 25px 0 0;
+  }
+  .content .board-container .board-content .crafts-img {
+    width: 100%;
+    height: 80%;
+    border-radius: 25px 25px 0 0;
+  }
+  .foother .feedback-container {
+    width: 80%;
+  }
+  .foother .feedback-container .feedback-text {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .foother .feedback-container .feedback-text h1 {
+    justify-content: center;
+    text-align: center;
+  }
+  .foother .feedback-container .feedback-text p {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .foother .feedback-container .feedback-form {
+    flex-direction: column;
+    padding: 0 24px;
+  }
+  .foother .informations-blocks {
+    width: 80%;
+  }
+}/*# sourceMappingURL=style.css.map */

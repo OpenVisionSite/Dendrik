@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+    color: #000;
+}
+body {
+    background: var(--main-bg-color);
+}
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: initial;
+}
+input {
+    outline: none;
+    border: none;
+    border-radius: 60px;
+    background: initial;
+}
+li {
+    list-style-type: none;
+}
+a {
+    cursor: pointer;
+}
+
+:root {
+    --default-width-selection: 1160px;
+    --mobile-1270-width: 620px;
+    --mobile-740-width: 420px;
+    --mobile-740-width-foother: 390px;
+    --content-indent: 27px;
+    --main-bg-color: #f6f6f6;
+    --main-text-color: #000;
+    --foother-text-color: #fff;
+}
+
+.cnt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+
+    .navbar-top {
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        width: 100%;
+        height: 92px;
+        backdrop-filter: blur(35px);
+        background: rgba($color: #ffffff, $alpha: 0.7);
+
+        .catalog-container {
+            justify-content: left;
+            width: 240px;
+            height: 100%;
+            margin-left: 82px;
+
+            .catalog-button {
+                flex-direction: row;
+                padding: 14px;
+                gap: 12px;
+
+                .catalog-square {
+                    width: 21px;
+                    height: 21px;
+                    border: 2px solid #000;
+                    border-radius: 6px;
+                }
+            }
+        }
+
+        .links-items {
+
+            .list-items {
+                flex-direction: row;
+                gap: 18px;
+                margin: 0;
+
+                .link {
+                    padding: 14px;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .options-container {
+            justify-content: right;
+            gap: 12px;
+            width: 240px;
+            margin-right: 82px;
+
+            .select-linguage {
+                padding: 14px;
+            }
+
+            .basket {
+                padding: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .back-main {
+        width: 100%;
+        height: 100%;
+        margin-top: 92px;
+
+            .background-img {
+            width: 100%;
+            height: 100%;
+            margin: var(--content-indent);
+            border-radius: 25px;
+            background-size: cover;
+            background-image: url('img/background.png');
+        }
+    }
+
+    .arrow-indicator {
+        width: 100%;
+        height: 94px;
+    }
+}
+
+.content {
+    flex-direction: column;
+    width: 100%;
+    padding: 88px 0;
+    gap: var(--content-indent);
+
+    .board-container {
+        width: 100%;
+        height: 396px;
+
+        .board-content {
+            justify-content: left;
+            width: var(--default-width-selection);
+            height: 396px;
+            cursor: pointer;
+            margin: var(--content-indent);
+            border-radius: 25px;
+            background: #fff;
+
+            .block-container {
+                width: 45%;
+                height: 100%;
+
+                .board-items {
+                    align-items: flex-end;
+                    justify-content: left;
+                    flex-direction: row;
+                    width: 60%;
+        
+                    h1 {
+                        line-height: inherit;
+                        font-size: 28px;
+                    }
+                }
+            }
+
+            .nursery-img {
+                width: 55%;
+                height: 100%;
+                border-radius: 0 25px 25px 0;
+                background-image: url('img/nursery.png');
+            }
+            .childrens-furniture-img {
+                width: 55%;
+                height: 100%;
+                border-radius: 0 25px 25px 0;
+                background-image: url('img/childrens-furniture.png');
+            }
+            .toys-img {
+                width: 55%;
+                height: 100%;
+                border-radius: 0 25px 25px 0;
+                background-image: url('img/toys.png');
+            }
+            .crafts-img {
+                width: 55%;
+                height: 100%;
+                border-radius: 0 25px 25px 0;
+                background-image: url('img/crafts.png');
+            }
+        }
+    }
+}
+
+.foother {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    width: 100%;
+    padding: 80px 0 40px;
+    background: #000;
+        
+    * {
+        color: #fff;
+    }
+    .feedback-container {
+        display: flex;
+        flex-direction: column;
+        gap: 73px;
+        width: var(--default-width-selection);
+        h1 {
+            width: 50%;
+            text-align: left;
+            font-size: 42px;
+            font-weight: 600px;
+            text-transform: uppercase;
+        }
+        p {
+            width: 50%;
+            line-height: 20px;
+            text-align: right;
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .feedback-form {
+            display: flex;
+            flex-direction: row;
+            gap: 18px;
+            
+            input {
+                width: 14vw;
+                height: 48px;
+            }
+            .feedback-input-container {
+                padding: 0 18px;
+                border: 2px solid rgba($color: #ffffff, $alpha: 0.4);
+                border-radius: 60px;
+            }
+            .feedback-button-container {
+                height: 52px;
+                padding: 0 48px;
+                border-radius: 60px;
+                background: #fff;
+                color: #000;
+            }
+        }
+    }
+    
+    .informations-blocks {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        width: var(--default-width-selection);
+
+        .information-block-1 {
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+            gap: 6px;
+            width: 240px;
+            
+            h1 {
+                font-size: 19px;
+            }
+            .inf-links a {
+                font-weight: lighter;
+                color: rgba($color: #ffffff, $alpha: 0.7);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1270px) {
+    .links-items {
+        display: none;
+    }
+
+    .content {
+    
+        .board-container {
+    
+            .board-content {
+                width: var(--mobile-1270-width);
+
+                .block-container {
+                    width: 60%;
+                }
+
+                .nursery-img {
+                    width: 40%;
+                }
+                .childrens-furniture-img {
+                    width: 40%;
+                }
+                .toys-img {
+                    width: 40%;
+                }
+                .crafts-img {
+                    width: 40%;
+                }
+            }
+        }
+    }
+    .foother {
+            
+        * {
+
+        }
+        .feedback-container {
+            width: var(--mobile-1270-width);
+        }
+        .informations-blocks {
+            flex-direction: column;
+            width: var(--mobile-1270-width);
+            gap: 42px;
+
+            .information-block-1 {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 970px) {
+    .header {
+        background: #fff;
+    
+        .navbar-top {
+    
+            .catalog-container {
+                margin-left: 30px;
+            }
+            .options-container {
+                margin-right: 30px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 740px) {
+    .links-items {
+        display: none;
+    }
+
+    .content {
+    
+        .board-container {
+            height: 530px;
+    
+            .board-content {
+                flex-direction: column-reverse;
+                width: var(--mobile-740-width);
+                height: 530px;
+
+                .block-container {
+                    width: 100%;
+                    height: 20%;
+
+                    .board-items {
+                        justify-content: center;
+                    }
+                }
+
+                .nursery-img {
+                    width: 100%;
+                    height: 80%;
+                    border-radius: 25px 25px 0 0;
+                }
+                .childrens-furniture-img {
+                    width: 100%;
+                    height: 80%;
+                    border-radius: 25px 25px 0 0;
+                }
+                .toys-img {
+                    width: 100%;
+                    height: 80%;
+                    border-radius: 25px 25px 0 0;
+                }
+                .crafts-img {
+                    width: 100%;
+                    height: 80%;
+                    border-radius: 25px 25px 0 0;
+                }
+            }
+        }
+    }
+    .foother {
+            
+        * {
+
+        }
+        .feedback-container {
+            width: 80%;
+
+            .feedback-text {
+                flex-direction: column;
+                gap: 24px;
+
+                h1 {
+                    justify-content: center;
+                    text-align: center;
+                }
+                p {
+                    justify-content: center;
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+
+            .feedback-form {
+                flex-direction: column;
+                padding: 0 24px;
+            }
+        }
+        .informations-blocks {
+            width: 80%;
+
+            .information-block-1 {
+            }
+        }
+    }
+}
