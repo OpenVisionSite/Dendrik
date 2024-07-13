@@ -163,24 +163,28 @@ a {
   width: 55%;
   height: 100%;
   border-radius: 0 25px 25px 0;
+  background-size: cover;
   background-image: url("img/nursery.png");
 }
 .content .board-container .board-content .childrens-furniture-img {
   width: 55%;
   height: 100%;
   border-radius: 0 25px 25px 0;
+  background-size: cover;
   background-image: url("img/childrens-furniture.png");
 }
 .content .board-container .board-content .toys-img {
   width: 55%;
   height: 100%;
   border-radius: 0 25px 25px 0;
+  background-size: cover;
   background-image: url("img/toys.png");
 }
 .content .board-container .board-content .crafts-img {
   width: 55%;
   height: 100%;
   border-radius: 0 25px 25px 0;
+  background-size: cover;
   background-image: url("img/crafts.png");
 }
 
@@ -221,7 +225,7 @@ a {
   gap: 18px;
 }
 .foother .feedback-container .feedback-form input {
-  width: 14vw;
+  width: 100%;
   height: 48px;
 }
 .foother .feedback-container .feedback-form .feedback-input-container {
@@ -305,16 +309,19 @@ a {
   }
 }
 @media only screen and (max-width: 740px) {
+  * {
+    font-size: 13px;
+  }
   .links-items {
     display: none;
   }
   .content .board-container {
-    height: 530px;
+    height: 410px;
   }
   .content .board-container .board-content {
     flex-direction: column-reverse;
     width: var(--mobile-740-width);
-    height: 530px;
+    height: 410px;
   }
   .content .board-container .board-content .block-container {
     width: 100%;
@@ -322,6 +329,9 @@ a {
   }
   .content .board-container .board-content .block-container .board-items {
     justify-content: center;
+  }
+  .content .board-container .board-content .block-container .board-items h1 {
+    font-size: 18px;
   }
   .content .board-container .board-content .nursery-img {
     width: 100%;
