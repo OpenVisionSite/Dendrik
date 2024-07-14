@@ -225,15 +225,15 @@ h1 {
   background-image: url("img/db-1-toy-6.png");
 }
 .content .board-informations {
-  display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 38px;
   width: 55vw;
 }
 .content .board-informations .inf-title {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  width: 100%;
 }
 .content .board-informations .inf-title h1 {
   font-size: 28px;
@@ -242,6 +242,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .content .board-informations .inf-text span {
   color: rgba(0, 0, 0, 0.6);
@@ -251,11 +252,15 @@ h1 {
   color: rgba(0, 0, 0, 0.4);
 }
 .content .board-informations button {
-  width: 100%;
+  width: 40%;
   border-radius: 60px;
   padding: 18px 0;
   background-color: #2e6df5;
   color: #fff;
+}
+.content .board-informations span {
+  cursor: pointer;
+  color: #2e6df5;
 }
 
 .foother {
@@ -414,17 +419,17 @@ h1 {
     width: 80vw;
   }
   .content .board-informations .inf-title {
-    display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    gap: 14px;
+    align-items: center;
   }
   .content .board-informations .inf-title h1 {
     text-align: left;
   }
-  .content .board-informations span {
-    cursor: pointer;
-    color: #2e6df5;
+  .content .board-informations .inf-text {
+    text-align: center;
+  }
+  .content .board-informations button {
+    width: 60%;
   }
   .foother .feedback-container {
     width: 80%;
