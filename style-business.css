@@ -94,7 +94,6 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 40vh;
   background: #fff;
 }
 .header .navbar-top {
@@ -106,6 +105,7 @@ h1 {
   -webkit-backdrop-filter: blur(35px);
           backdrop-filter: blur(35px);
   background: rgba(255, 255, 255, 0.7);
+  z-index: var(--z-index-upper);
 }
 .header .navbar-top .catalog-container {
   justify-content: left;
@@ -146,18 +146,6 @@ h1 {
   padding: 14px;
   cursor: pointer;
 }
-.header .back-main {
-  width: 100%;
-  height: 100%;
-  margin-top: 102px;
-}
-.header .back-main .background-img {
-  width: 100%;
-  height: 100%;
-  margin: var(--content-indent);
-  border-radius: 25px;
-  background: initial;
-}
 .header .arrow-indicator {
   width: 100%;
   height: 94px;
@@ -176,10 +164,12 @@ h1 {
   padding: 14px 0;
   text-align: left;
   border-bottom: 2px solid #000;
+  z-index: var(--z-index-default);
 }
 .category-container .category-items .category-filter {
   padding: 6px;
   cursor: pointer;
+  z-index: var(--z-index-default);
 }
 
 .content {
@@ -324,6 +314,7 @@ h1 {
   width: 240px;
 }
 .foother .informations-blocks .information-block-1 h1 {
+  text-align: left;
   font-size: 19px;
 }
 .foother .informations-blocks .information-block-1 .inf-links a {
