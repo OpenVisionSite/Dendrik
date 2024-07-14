@@ -470,6 +470,9 @@ h1 {
   .content .board-informations button {
     width: 60%;
   }
+  .content .inf-delivery {
+    width: 80vw;
+  }
   .foother .feedback-container {
     width: 80%;
   }
