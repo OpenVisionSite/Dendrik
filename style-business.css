@@ -41,6 +41,10 @@ a {
   cursor: pointer;
 }
 
+h1 {
+  text-align: center;
+}
+
 :root {
   --default-width-selection: 1160px;
   --mobile-1270-width: 620px;
@@ -90,7 +94,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 40vh;
   background: #fff;
 }
 .header .navbar-top {
@@ -145,15 +149,14 @@ a {
 .header .back-main {
   width: 100%;
   height: 100%;
-  margin-top: 92px;
+  margin-top: 102px;
 }
 .header .back-main .background-img {
   width: 100%;
   height: 100%;
   margin: var(--content-indent);
   border-radius: 25px;
-  background-size: cover;
-  background-image: url("img/background.png");
+  background: initial;
 }
 .header .arrow-indicator {
   width: 100%;
@@ -167,59 +170,73 @@ a {
   gap: var(--content-indent);
 }
 .content .board-container {
+  display: grid;
+  grid-template-columns: 396px 396px 396px;
+  gap: 26px;
   width: 100%;
-  height: 396px;
 }
 .content .board-container .board-content {
-  justify-content: left;
-  width: var(--default-width-selection);
+  flex-direction: column-reverse;
+  width: 396px;
   height: 396px;
   cursor: pointer;
-  margin: var(--content-indent);
   border-radius: 25px;
   background: #fff;
 }
 .content .board-container .board-content .block-container {
-  width: 45%;
-  height: 100%;
+  width: 100%;
+  height: 30%;
 }
 .content .board-container .board-content .block-container .board-items {
-  align-items: flex-end;
-  justify-content: left;
-  flex-direction: row;
-  width: 60%;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
 }
 .content .board-container .board-content .block-container .board-items h1 {
   line-height: inherit;
-  font-size: 28px;
+  font-size: 16px;
 }
-.content .board-container .board-content .nursery-img {
-  width: 55%;
-  height: 100%;
-  border-radius: 0 25px 25px 0;
-  background-size: cover;
-  background-image: url("img/nursery.png");
+.content .board-container .board-content .block-container .board-items p {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
 }
-.content .board-container .board-content .childrens-furniture-img {
-  width: 55%;
-  height: 100%;
-  border-radius: 0 25px 25px 0;
+.content .board-container .board-content [class^=toy-img_] {
+  width: 100%;
+  height: 70%;
+  border-radius: 25px 25px 0 0;
   background-size: cover;
-  background-image: url("img/childrens-furniture.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.content .board-container .board-content .toys-img {
-  width: 55%;
-  height: 100%;
-  border-radius: 0 25px 25px 0;
-  background-size: cover;
-  background-image: url("img/toys.png");
+.content .board-container .board-content .toy-img_1 {
+  background-image: url("img/toy-1.png");
 }
-.content .board-container .board-content .crafts-img {
-  width: 55%;
-  height: 100%;
-  border-radius: 0 25px 25px 0;
-  background-size: cover;
-  background-image: url("img/crafts.png");
+.content .board-container .board-content .toy-img_2 {
+  background-image: url("img/toy-2.png");
+}
+.content .board-container .board-content .toy-img_3 {
+  background-image: url("img/toy-3.png");
+}
+.content .board-container .board-content .toy-img_4 {
+  background-image: url("img/toy-4.png");
+}
+.content .board-container .board-content .toy-img_5 {
+  background-image: url("img/toy-5.png");
+}
+.content .board-container .board-content .toy-img_6 {
+  background-image: url("img/toy-6.png");
+}
+.content .board-container .board-content .toy-img_7 {
+  background-image: url("img/toy-7.png");
+}
+.content .board-container .board-content .toy-img_8 {
+  background-image: url("img/toy-8.png");
+}
+.content .board-container .board-content .toy-img_9 {
+  background-image: url("img/toy-9.png");
+}
+.content .board-container .board-content .toy-img_10 {
+  background-image: url("img/toy-10.png");
 }
 
 .foother {
@@ -299,23 +316,9 @@ a {
   .navbar-top .links-items .list-items {
     display: none;
   }
-  .content .board-container .board-content {
-    width: var(--mobile-1270-width);
-  }
-  .content .board-container .board-content .block-container {
-    width: 60%;
-  }
-  .content .board-container .board-content .nursery-img {
-    width: 40%;
-  }
-  .content .board-container .board-content .childrens-furniture-img {
-    width: 40%;
-  }
-  .content .board-container .board-content .toys-img {
-    width: 40%;
-  }
-  .content .board-container .board-content .crafts-img {
-    width: 40%;
+  .content .board-container {
+    display: grid;
+    grid-template-columns: 396px 396px;
   }
   .foother .feedback-container {
     width: var(--mobile-1270-width);
@@ -341,6 +344,10 @@ a {
   .header .navbar-top .options-container {
     margin-right: 30px;
   }
+  .content .board-container {
+    display: grid;
+    grid-template-columns: 396px;
+  }
 }
 @media only screen and (max-width: 740px) {
   * {
@@ -357,42 +364,20 @@ a {
     white-space: nowrap;
   }
   .content .board-container {
-    height: 410px;
+    display: grid;
+    grid-template-columns: 80%;
   }
   .content .board-container .board-content {
-    flex-direction: column-reverse;
-    width: var(--mobile-740-width);
-    height: 410px;
+    width: 100%;
   }
   .content .board-container .board-content .block-container {
     width: 100%;
-    height: 20%;
-  }
-  .content .board-container .board-content .block-container .board-items {
-    justify-content: center;
   }
   .content .board-container .board-content .block-container .board-items h1 {
-    font-size: 18px;
+    font-size: 14px;
   }
-  .content .board-container .board-content .nursery-img {
-    width: 100%;
-    height: 80%;
-    border-radius: 25px 25px 0 0;
-  }
-  .content .board-container .board-content .childrens-furniture-img {
-    width: 100%;
-    height: 80%;
-    border-radius: 25px 25px 0 0;
-  }
-  .content .board-container .board-content .toys-img {
-    width: 100%;
-    height: 80%;
-    border-radius: 25px 25px 0 0;
-  }
-  .content .board-container .board-content .crafts-img {
-    width: 100%;
-    height: 80%;
-    border-radius: 25px 25px 0 0;
+  .content .board-container .board-content .block-container .board-items p {
+    font-size: 14px;
   }
   .foother .feedback-container {
     width: 80%;
@@ -417,4 +402,4 @@ a {
   .foother .informations-blocks {
     width: 80%;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style-business.css.map */
