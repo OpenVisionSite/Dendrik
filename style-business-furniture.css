@@ -56,6 +56,7 @@ h1 {
   --foother-text-color: #fff;
   --z-index-default: 100;
   --z-index-upper: 200;
+  --z-index-extra-upper: 500;
 }
 
 .cnt {
@@ -158,6 +159,9 @@ h1 {
   margin: var(--content-indent);
   border-radius: 25px;
   background-size: cover;
+}
+.header .back-main .background-img h1 {
+  font-size: 28px;
 }
 .header .arrow-indicator {
   width: 100%;

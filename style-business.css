@@ -56,6 +56,7 @@ h1 {
   --foother-text-color: #fff;
   --z-index-default: 100;
   --z-index-upper: 200;
+  --z-index-extra-upper: 500;
 }
 
 .cnt {
@@ -74,7 +75,7 @@ h1 {
   -webkit-backdrop-filter: blur(35px);
           backdrop-filter: blur(35px);
   background: rgba(255, 255, 255, 0.8);
-  z-index: var(--z-index-default);
+  z-index: var(--z-index-upper);
 }
 .mobile-catalog * {
   font-size: 20px;
@@ -106,7 +107,7 @@ h1 {
   -webkit-backdrop-filter: blur(35px);
           backdrop-filter: blur(35px);
   background: rgba(255, 255, 255, 0.7);
-  z-index: var(--z-index-upper);
+  z-index: var(--z-index-default);
 }
 .header .navbar-top .catalog-container {
   justify-content: left;

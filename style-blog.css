@@ -95,7 +95,7 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 40vh;
   background: #fff;
 }
 .header .navbar-top {
@@ -159,10 +159,9 @@ h1 {
   margin: var(--content-indent);
   border-radius: 25px;
   background-size: cover;
-  background-image: url("img/about-background.png");
 }
 .header .back-main .background-img h1 {
-  color: #fff;
+  color: #000000;
   font-size: 28px;
 }
 .header .arrow-indicator {
@@ -176,14 +175,40 @@ h1 {
   padding: 32px 0 88px 0;
   gap: var(--content-indent);
 }
-.content .informations-value {
+.content .board-container {
+  flex-direction: column;
+  gap: 27px;
   width: 55vw;
+}
+.content .board-container [class^=board-image_] {
+  width: 100%;
+  height: 35vw;
+  border-radius: 25px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.content .board-container .board-image_1 {
+  background-image: url("img/blog-img-1.png");
+}
+.content .board-container .board-image_2 {
+  background-image: url("img/blog-img-2.png");
+}
+.content .board-container .board-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-indent);
   padding: 44px;
   border-radius: 25px;
-  background-color: #fff;
+  background: #fff;
 }
-.content .informations-value p {
-  color: rgba(0, 0, 0, 0.8);
+.content .board-container .board-items h1 {
+  font-size: 20px;
+  word-wrap: break-word;
+  text-align: left;
+}
+.content .board-container .board-items p {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .foother {
@@ -267,10 +292,6 @@ h1 {
   .category-container .category-items .category-selection {
     width: 190px;
   }
-  .content .board-container {
-    display: grid;
-    grid-template-columns: 396px 396px;
-  }
   .foother .feedback-container {
     width: var(--mobile-1270-width);
   }
@@ -330,6 +351,19 @@ h1 {
     padding: 32px 0 88px 0;
     gap: var(--content-indent);
   }
+  .content .board-container {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    width: 80vw;
+  }
+  .content .board-container [class^=board-image_] {
+    width: 100%;
+    height: 60vw;
+  }
+  .content .board-container .board-items h1 {
+    word-break: break-all;
+  }
   .foother .feedback-container {
     width: 80%;
   }
@@ -353,4 +387,4 @@ h1 {
   .foother .informations-blocks {
     width: 80%;
   }
-}/*# sourceMappingURL=style-about.css.map */
+}/*# sourceMappingURL=style-blog.css.map */

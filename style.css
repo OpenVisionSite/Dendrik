@@ -52,6 +52,7 @@ a {
   --foother-text-color: #fff;
   --z-index-default: 100;
   --z-index-upper: 200;
+  --z-index-extra-upper: 500;
 }
 
 .cnt {

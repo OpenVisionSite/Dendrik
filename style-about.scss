@@ -50,6 +50,7 @@ h1 {
     --foother-text-color: #fff;
     --z-index-default: 100;
     --z-index-upper: 200;
+    --z-index-extra-upper: 500;
 }
 
 .cnt {
@@ -67,7 +68,7 @@ h1 {
     height: 100vh;
     backdrop-filter: blur(35px);
     background: rgba($color: #ffffff, $alpha: 0.8);
-    z-index: var(--z-index-default);
+    z-index: var(--z-index-upper);
 
     * {
         font-size: 20px;
@@ -99,7 +100,7 @@ h1 {
         height: 92px;
         backdrop-filter: blur(35px);
         background: rgba($color: #ffffff, $alpha: 0.7);
-        z-index: var(--z-index-upper);
+        z-index: var(--z-index-default);
 
         .catalog-container {
             justify-content: left;
@@ -190,7 +191,7 @@ h1 {
         background-color: #fff;
 
         p {
-            color: rgba($color: #000000, $alpha: 0.6);
+            color: rgba($color: #000000, $alpha: 0.8);
         }
     }
 }
@@ -360,7 +361,7 @@ h1 {
 @media only screen and (max-width: 740px) {
     
     * {
-        font-size: 13px;
+        font-size: 15px;
     }
     .navbar-top {
 
@@ -402,7 +403,7 @@ h1 {
     gap: var(--content-indent);
 
         .informations-value {
-            width: 90vw;
+            
         }
     }
 
