@@ -7,6 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style-delivery.css'>
     <script src='app.js'></script>
+    <script src='translations.js'></script>
 </head>
 <body>
     <div class="mobile-catalog cnt">
@@ -28,25 +29,28 @@
             <div class="catalog-container cnt">
                 <button class="catalog-button cnt">
                     <div class="catalog-square"></div>
-                    <p>Katalog</p>
+                    <p data-translate-key="catalog">Katalog</p>
                 </button>
             </div>
             <div class="links-items cnt">
                 <ul class="list-items cnt">
-                    <li><a class="link" href="Business.html">Geschaft</a></li>
-                    <li><a class="link" href="New.html">Neuigkeiten</a></li>
-                    <li><a class="link" href="About.html">Uber uns</a></li>
-                    <li><a class="link" href="Delivery.html">Lieferung</a></li>
+                    <li><a class="link" href="Business.html" data-translate-key="business">Geschaft</a></li>
+                    <li><a class="link" href="New.html" data-translate-key="news">Neuigkeiten</a></li>
+                    <li><a class="link" href="About.html" data-translate-key="about">Uber uns</a></li>
+                    <li><a class="link" href="Delivery.html" data-translate-key="delivery">Lieferung</a></li>
                 </ul>
             </div>
             <div class="options-container cnt">
-                <button class="select-linguage"><img src="img/language.png"></button>
-                <div class="basket">Кошик</div>
+                <div class="select-linguage"></div>
+                <button class="linguage" data-lang="du">DU</button>
+                <button class="linguage" data-lang="en">EN</button>
+                <button class="linguage" data-lang="ua">UA</button>
+                <a class="basket" href="Cart.html" data-translate-key="basket">Кошик</a>
             </div>
         </div>
         <div class="back-main cnt">
             <div class="background-img cnt">
-                <h1>Lieferung</h1>
+                <h1 data-translate-key="delivery">Lieferung</h1>
             </div>
         </div>
         <div class="arrow-indicator cnt">
@@ -55,52 +59,54 @@
     </div>
     <div class="content cnt">
         <div class="informations-value">
-            <div class="title"><h1>Порядок</h1></div>
-            <p>Ми доставляємо товари не тільки в межах Німеччини, а й в Австрію, Швейцарію та інші країни Європи. При замовленні більше 10 одиниць доставка безкоштовна.</p>
+            <div class="title"><h1 data-translate-key="order">Порядок</h1></div>
+            <p data-translate-key="order_text">Ми доставляємо товари не тільки в межах Німеччини, а й в Австрію, Швейцарію та інші країни Європи. При замовленні більше 10 одиниць доставка безкоштовна.</p>
         </div>
         <div class="informations-value">
-            <div class="title"><h1>Доставка</h1></div>
-            <p>Зазвичай ми доставляємо замовлення в межах 3-6 робочих днів. Ми доставляємо ваше замовлення в Австрію приблизно за 4-8 робочих днів, до Швейцарії ми зазвичай доставляємо приблизно 3-6 робочих днів.</p>
+            <div class="title"><h1 data-translate-key="delivery">Доставка</h1></div>
+            <p data-translate-key="delivery_text">Зазвичай ми доставляємо замовлення в межах 3-6 робочих днів. Ми доставляємо ваше замовлення в Австрію приблизно за 4-8 робочих днів, до Швейцарії ми зазвичай доставляємо приблизно 3-6 робочих днів.</p>
         </div>
         <div class="informations-value">
-            <div class="title"><h1>Оплата</h1></div>
-            <p>Ми пропонуємо вам такі варіанти оплати: через PayPal, Visa або MasterCart. Ми перерахуємо ваше відшкодування на ту саму картку, яку ви використали для замовлення.</p>
+            <div class="title"><h1 data-translate-key="payment">Оплата</h1></div>
+            <p data-translate-key="payment_text">Ми пропонуємо вам такі варіанти оплати: через PayPal, Visa або MasterCart. Ми перерахуємо ваше відшкодування на ту саму картку, яку ви використали для замовлення.</p>
         </div>
     </div>
     
     <div class="foother cnt">
         <div class="feedback-container">
             <div class="feedback-text cnt">
-                <h1>Im tema sein?</h1>
-                <p>Anmerkungen oder vorschläge zu den produkten oder service von dendrik? wir helfen ihnen gerne weiter.</p>
+                <h1 data-translate-key="in_topic">Im tema sein?</h1>
+                <p data-translate-key="suggestions">Anmerkungen oder vorschläge zu den produkten oder service von dendrik? wir helfen ihnen gerne weiter.</p>
             </div>
             <form class="feedback-form">
                 <div class="feedback-input-container">
-                    <input type="text" placeholder="Ihre name">
+                    <input type="text" placeholder="Ihre name" data-translate-key="your_name">
                 </div>
                 <div class="feedback-input-container">
-                    <input type="tel" placeholder="Phone">
+                    <input type="tel" placeholder="Phone" data-translate-key="phone">
                 </div>
-                <button class="feedback-button-container" type="submit">Sumbit</button>
+                <button class="feedback-button-container" type="submit" data-translate-key="submit">Sumbit</button>
             </form>
         </div>
         <div class="informations-blocks">
             <div class="information-block-1">
-                <h1>Information</h1>
-                <div class="inf-links"><a href="Blog.html">Blog</a></div>
-                <div class="inf-links"><a href="Delivery.html">Lieferung</a></div>
-                <div class="inf-links"><a>Kontakt</a></div>
-                <div class="inf-links"><a href="About.html">Über uns</a></div>
-                <div class="inf-links"><a href="Business.html">Geschäft</a></div>
+                <h1 data-translate-key="information">Information</h1>
+                <div class="inf-links"><a href="Blog.html" data-translate-key="blog">Blog</a></div>
+                <div class="inf-links"><a href="Delivery.html" data-translate-key="delivery">Lieferung</a></div>
+                <div class="inf-links"><a href="Kontakt.html" data-translate-key="contact">Kontakt</a></div>
+                <div class="inf-links"><a href="About.html" data-translate-key="about">Über uns</a></div>
+                <div class="inf-links"><a href="Business.html" data-translate-key="business">Geschäft</a></div>
             </div>
             <div class="information-block-1">
-                <h1>Kontakt</h1>
+                <h1 data-translate-key="contact">Kontakt</h1>
                 <div class="inf-links"><a href="mailto:dendrikshop@gmail.com">dendrikshop@gmail.com</a></div>
             </div>
             <div class="information-block-1">
-                <h1>Arbeitzeiten</h1>
-                <div class="inf-links"><a>Unser Kundenservice steht Ihnen von Montag bis Freitag von 10.00 bis 18.00 Uhr gerne zur Verfügung. Bitte geben Sie ihre Kontaktdaten ein und wir melden uns innerhalb von 12 Stunden bei Ihnen.
-                Der Hersteller: Talana.ua</a></div>
+                <h1 data-translate-key="working_hours">Arbeitzeiten</h1>
+                <div class="inf-links">
+                    <a data-translate-key="working_hours_details">Unser Kundenservice steht Ihnen von Montag bis Freitag von 10.00 bis 18.00 Uhr gerne zur Verfügung. Bitte geben Sie ihre Kontaktdaten ein und wir melden uns innerhalb von 12 Stunden bei Ihnen.
+                    Der Hersteller: Talana.ua</a>
+                </div>
             </div>
         </div>
     </div>
