@@ -11,16 +11,23 @@
 <body>
     <div class="mobile-catalog cnt">
         <button class="close-button cnt"><img src="img/close-button.svg"></button>
-        <div class="basket">Кошик</div>
+        <a class="basket cnt" href="Cart.html">
+            <img src="img/cart.svg">
+            0
+        </a>
         <div class="links-items cnt">
             <div class="list-items cnt">
-                <li><a class="link" href="Business.html">Geschaft</a></li>
-                <li><a class="link" href="New.html">Neuigkeiten</a></li>
-                <li><a class="link" href="About.html">Uber uns</a></li>
-                <li><a class="link" href="Delivery.html">Lieferung</a></li>
+                <li><a class="link" href="Business.html" data-translate-key="business">Geschaft</a></li>
+                <li><a class="link" href="New.html" data-translate-key="news">Neuigkeiten</a></li>
+                <li><a class="link" href="About.html" data-translate-key="about">Uber uns</a></li>
+                <li><a class="link" href="Delivery.html" data-translate-key="delivery">Lieferung</a></li>
             </div>
         </div>
-        <div class="select-linguage">Linguage</div>
+        <div class="select-language-mobile cnt">
+            <button class="language-mobile language" data-lang="du">DU</button>
+            <button class="language-mobile language" data-lang="en">EN</button>
+            <button class="language-mobile language" data-lang="ua">UA</button>
+        </div>
     </div>
 
     <div class="header">
@@ -28,20 +35,30 @@
             <div class="catalog-container cnt">
                 <button class="catalog-button cnt">
                     <div class="catalog-square"></div>
-                    <p>Katalog</p>
+                    <p data-translate-key="catalog">Katalog</p>
                 </button>
             </div>
             <div class="links-items cnt">
                 <ul class="list-items cnt">
-                    <li><a class="link" href="Business.html">Geschaft</a></li>
-                    <li><a class="link" href="New.html">Neuigkeiten</a></li>
-                    <li><a class="link" href="About.html">Uber uns</a></li>
-                    <li><a class="link" href="Delivery.html">Lieferung</a></li>
+                    <li><a class="link" href="Business.html" data-translate-key="business">Geschaft</a></li>
+                    <li><a class="link" href="New.html" data-translate-key="news">Neuigkeiten</a></li>
+                    <li><a class="link" href="About.html" data-translate-key="about">Uber uns</a></li>
+                    <li><a class="link" href="Delivery.html" data-translate-key="delivery">Lieferung</a></li>
                 </ul>
             </div>
             <div class="options-container cnt">
-                <button class="select-linguage"><img src="img/language.png"></button>
-                <div class="basket">Кошик</div>
+                <div class="select-language-container">
+                    <button class="select-language-buttom" data-translate-key="lng">DU</button>
+                    <div class="select-language">
+                        <button class="language" data-lang="du">DU</button>
+                        <button class="language" data-lang="en">EN</button>
+                        <button class="language" data-lang="ua">UA</button>
+                    </div>
+                </div>
+                <a class="basket cnt" href="Cart.html">
+                    <img src="img/cart.svg">
+                    0
+                </a>
             </div>
         </div>
         <div class="back-main cnt">
@@ -74,7 +91,7 @@
         <div class="feedback-container">
             <div class="feedback-text cnt">
                 <h1 data-translate-key="in_topic">Im tema sein?</h1>
-                <p data-translate-key="suggestions">Anmerkungen oder vorschläge zu den produkten oder service von dendrik? wir helfen ihnen gerne weiter.</p>
+                <p data-translate-key="suggestions">haben sie kommentare oder vorschläge zu dendrik-produkten oder -dienstleistungen? wir sind hier um zu helfen.</p>
             </div>
             <form class="feedback-form">
                 <div class="feedback-input-container">

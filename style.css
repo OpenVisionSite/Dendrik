@@ -65,7 +65,7 @@ a {
   display: none;
   position: fixed;
   flex-direction: column;
-  gap: 48px;
+  gap: 68px;
   width: 100%;
   height: 100vh;
   -webkit-backdrop-filter: blur(35px);
@@ -82,11 +82,23 @@ a {
   left: 38px;
   padding: 14px;
 }
+.mobile-catalog .basket {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 60px;
+}
 .mobile-catalog .list-items {
   flex-direction: column;
   gap: 24px;
 }
-.mobile-catalog .select-linguage button {
+.mobile-catalog .select-language-mobile {
+  gap: 8px;
+}
+.mobile-catalog .select-language-mobile button {
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -139,12 +151,32 @@ a {
   width: 240px;
   margin-right: 82px;
 }
-.header .navbar-top .options-container .select-linguage {
+.header .navbar-top .options-container .select-language-container {
+  display: flex;
+  justify-content: center;
   padding: 14px;
 }
+.header .navbar-top .options-container .select-language-container .select-language {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  padding: 14px 0px;
+  margin-top: 34px;
+  border-radius: 25px;
+  background: #fff;
+}
+.header .navbar-top .options-container .select-language-container .select-language .language {
+  width: 60px;
+  height: 32px;
+}
 .header .navbar-top .options-container .basket {
-  padding: 14px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 4px 12px;
   cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 60px;
 }
 .header .back-main {
   width: 100%;
@@ -302,6 +334,9 @@ a {
 @media only screen and (max-width: 1270px) {
   .navbar-top .links-items .list-items {
     display: none;
+  }
+  .navbar-top .options-container .select-language-container {
+    display: none !important;
   }
   .content .board-container .board-content {
     width: var(--mobile-1270-width);

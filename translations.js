@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const translations = {
         du: {
+            lng: 'DU',
             business: 'Geschaft',
             news: 'Neuigkeiten',
             about: 'Uber uns',
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toys: 'Spielzeuge',
             crafts: 'Crafts',
             in_topic: 'Im tema sein?',
-            suggestions: 'Anmerkungen oder vorschläge zu den produkten oder service von dendrik? wir helfen ihnen gerne weiter.',
+            suggestions: 'haben sie kommentare oder vorschläge zu dendrik-produkten oder -dienstleistungen? wir sind hier um zu helfen.',
             your_name: 'Ihre name',
             phone: 'Phone',
             submit: 'Sumbit',
@@ -74,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
             countries_5: 'Bulgarien Spanien Griechenland Portugal'
         },
         en: {
+            lng: 'EN',
             business: 'Business',
             news: 'News',
             about: 'About us',
@@ -87,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toys: 'Toys',
             crafts: 'Crafts',
             in_topic: 'Stay in the loop?',
-            suggestions: 'Comments or suggestions about Dendrik products or services? We are happy to help.',
+            suggestions: "Do you have comments or suggestions about Dendrik products or services? We're here to help.",
             your_name: 'Your name',
             phone: 'Phone',
             submit: 'Submit',
@@ -147,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
             countries_5: 'Bulgaria Spain Greece Portugal'
         },
         ua: {
+            lng: 'UA',
             business: 'Бізнес',
             news: 'Новини',
             about: 'Про нас',
@@ -160,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toys: 'Іграшки',
             crafts: 'Ремесла',
             in_topic: 'Будь в темі?',
-            suggestions: 'Коментарі або пропозиції щодо продукції або послуг Dendrik? Ми раді допомогти.',
+            suggestions: 'У вас є коментарі чи пропозиції щодо продуктів або послуг Dendrik? Ми тут, щоб допомогти.',
             your_name: 'Ваше ім\'я',
             phone: 'Телефон',
             submit: 'Надіслати',
@@ -225,12 +228,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-translate-key]').forEach(el => {
             const key = el.getAttribute('data-translate-key');
             if (translations[language] && translations[language][key]) {
-                el.textContent = translations[language][key];
+                if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
+                    el.setAttribute('placeholder', translations[language][key]);
+                } else {
+                    el.textContent = translations[language][key];
+                }
             }
         });
     }
 
-    document.querySelectorAll('.linguage').forEach(button => {
+    document.querySelectorAll('.language').forEach(button => {
         button.addEventListener('click', () => {
             const selectedLang = button.getAttribute('data-lang');
             localStorage.setItem('selectedLang', selectedLang);
