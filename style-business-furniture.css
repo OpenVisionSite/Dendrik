@@ -217,7 +217,7 @@ h1 {
   padding: 14px 0;
   text-align: left;
   border-bottom: 2px solid #000;
-  z-index: var(--z-index-default);
+  z-index: 15;
 }
 .category-container .category-items .category-filter {
   padding: 6px;
