@@ -495,7 +495,7 @@ h1 {
     align-items: center;
   }
   .content .board-informations .inf-title h1 {
-    text-align: left;
+    text-align: center;
   }
   .content .board-informations .inf-text {
     text-align: center;

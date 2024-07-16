@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const translations = {
-        du: {
-            lng: 'DU',
+        de: {
+            lng: 'DE',
             business: 'Geschaft',
             news: 'Neuigkeiten',
             about: 'Uber uns',

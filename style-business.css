@@ -182,6 +182,22 @@ h1 {
   border: 2px solid rgba(0, 0, 0, 0.4);
   border-radius: 60px;
 }
+.header .back-main {
+  width: 100%;
+  height: 100%;
+  margin-top: 92px;
+}
+.header .back-main .background-img {
+  width: 100%;
+  height: 100%;
+  margin: var(--content-indent);
+  border-radius: 25px;
+  background-size: cover;
+}
+.header .back-main .background-img h1 {
+  color: #000000;
+  font-size: 28px;
+}
 .header .arrow-indicator {
   width: 100%;
   height: 94px;
@@ -423,6 +439,7 @@ h1 {
     justify-content: center;
     text-align: center;
     width: 80%;
+    border: none;
   }
   .content .board-container {
     display: grid;
