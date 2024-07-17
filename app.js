@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const catalogButton = document.querySelector('.catalog-button');
     const mobileCatalog = document.querySelector('.mobile-catalog');
     const closeButton = document.querySelector('.close-button');
+    const selectLinguageButtom = document.querySelector('.select-language-buttom');
+    const selectLanguage = document.querySelector('.select-language');
+    const selectLanguageMobile = document.querySelector('.select-language-mobile');
+    const cookie = document.querySelector('.cookie');
+    const cookieButton = document.querySelector('.cookie-button');
     let isExpanded = false;
 
     catalogButton.onclick = () => {
@@ -21,10 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         isExpanded = !isExpanded;
     }
 
-    const selectLinguageButtom = document.querySelector('.select-language-buttom');
-    const selectLanguage = document.querySelector('.select-language');
-    const selectLanguageMobile = document.querySelector('.select-language-mobile');
-    const linguage = document.getElementById('cmb-lng');
 
     selectLinguageButtom.onclick = () => {
         if (!isExpanded) {
@@ -52,6 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (selectLanguageMobile) {
         selectLanguageMobile.onclick = hideLanguageSelector;
     }
-
     
+    if (localStorage.getItem('cookieAccepted') == 'true') {
+        cookie.style.display = 'none';
+    }
+
+    cookieButton.onclick = () => {
+        cookie.style.display = 'none';
+        localStorage.setItem('cookieAccepted', 'true');
+    }
 });
