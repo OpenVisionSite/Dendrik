@@ -116,6 +116,7 @@ h1 {
         height: 92px;
         backdrop-filter: blur(35px);
         background: rgba($color: #ffffff, $alpha: 0.7);
+        z-index: var(--z-index-extra-upper);
 
         .catalog-container {
             justify-content: left;
@@ -232,12 +233,12 @@ h1 {
             padding: 14px 0;
             text-align: left;
             border-bottom: 2px solid #000;
-            z-index: var(--z-index-default);
+            z-index: 15;
         }
         .category-filter {
             padding: 6px;
             cursor: pointer;
-            z-index: var(--z-index-default);
+            z-index: 15;
         }
     }
 }

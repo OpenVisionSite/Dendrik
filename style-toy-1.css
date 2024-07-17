@@ -286,8 +286,13 @@ h1 {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.4);
 }
-.content .board-informations button {
+.content .board-informations .buy-container {
+  flex-direction: column;
+  gap: 14px;
   width: 40%;
+}
+.content .board-informations .buy-container .buy {
+  width: 100%;
   border-radius: 60px;
   padding: 18px 0;
   background-color: #2e6df5;
@@ -500,7 +505,7 @@ h1 {
   .content .board-informations .inf-text {
     text-align: center;
   }
-  .content .board-informations button {
+  .content .board-informations .buy-container {
     width: 60%;
   }
   .content .inf-delivery {
