@@ -225,9 +225,6 @@ a {
   .navbar-top .links-items .list-items {
     display: none;
   }
-  .navbar-top .options-container .select-language-container {
-    display: none !important;
-  }
   .content .board-container .board-content {
     width: var(--mobile-1270-width);
   }

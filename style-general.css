@@ -33,7 +33,7 @@
   gap: 24px;
 }
 .mobile-catalog .select-language-mobile {
-  gap: 8px;
+  gap: 2px;
 }
 .mobile-catalog .select-language-mobile button {
   color: rgba(0, 0, 0, 0.6);
@@ -151,9 +151,6 @@
 @media only screen and (max-width: 1270px) {
   .navbar-top .links-items .list-items {
     display: none;
-  }
-  .navbar-top .options-container .select-language-container {
-    display: none !important;
   }
   .foother .feedback-container {
     width: var(--mobile-1270-width);
